@@ -11,12 +11,11 @@ env:
   postgresqldb: es
   mssqlpassword: sysadmin@1234
   postgreqlpassword: postgres
-  azuresqlsecret: ${{ secrets.AzureSqlSecret }}
+  azuresqlsecret: ${{ secrets.AZURE_SQL_SECRET }}
   mssqlsecret: "Server=localhost,1433;Initial Catalog=es;Persist Security Info=False;User ID=sa;Password=sysadmin@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=true;Connection Timeout=30;"
   postgresqlsecret: "host=localhost;port=5432;username=postgres;password=postgres;database=es"
 
 jobs:
-  
   build:
     runs-on: ubuntu-22.04
 
@@ -69,5 +68,3 @@ jobs:
       run: |
         dotnet build
         dotnet test --no-build --verbosity normal
-
-    
