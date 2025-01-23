@@ -1,11 +1,10 @@
-
 name: build workflow
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "testing" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "testing" ]
 
 env:
   mssqldb: es
